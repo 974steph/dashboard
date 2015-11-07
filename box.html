@@ -1,0 +1,199 @@
+
+<!DOCTYPE html>
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300' rel='stylesheet' type='text/css'>
+
+        <script src="js/metro.js"></script>
+        <script src="js/meteo.js" type="text/javascript"></script>
+        <script src="js/skycons.js"></script>
+        
+
+
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link href="css/metro.css" rel="stylesheet">
+        <link href="css/metro-icons.css" rel="stylesheet">
+    	  <link href="css/metro-responsive.css" rel="stylesheet">
+
+      	<link href="css/thermometre.css" rel="stylesheet">
+
+   		
+
+   
+        <link rel="stylesheet" href="css/meteo2.css">
+        
+        <link rel="stylesheet" href="climacon-font/styles.css">
+      
+   
+
+      
+
+        
+    </head>
+
+
+
+
+
+
+
+
+<body>
+    <div class="container">
+        
+            
+        <div class="main-content clear-float">
+            <div class="tile-area no-padding">
+                <div class="tile-group no-margin no-padding" style="width: 100%">
+                    <div class="tile-large tile-big-y bg-violet " style="float: right; ">
+                        <div class="tile-content">
+                            <div class=" padding10">
+                                
+
+
+
+<div class="ssaTempcontainer">
+ 		
+        <div class="de">
+            <div class="den">
+              <div class="dene">
+                <div class="denem">
+                  <div class="deneme">
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+  		<div class="degres">18.9</div>
+		<script> 
+           var idegres = parseFloat( $('.degres').text( )).toFixed(1);
+           var number= idegres.toString();
+           var res = number.split("."); 
+            if (res[1] == null) {
+              res[1]=0;
+           }
+           var chaine = res[0] + "<span>." + res[1]  +"</span><strong>&deg;</strong>" ;
+           $('.deneme').html( chaine );
+         </script>  
+</div>
+
+
+
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tile-large ol-transparent" data-role="tile">
+                        <div class="tile-content iconic">
+                           <img src="icon/finnuit.png">
+                        </div>
+                    </div>
+                    <div class="tile bg-lightBlue " data-role="tile">
+                       
+                    </div>
+                    <div class="tile bg-orange " data-role="tile">
+                       
+                    </div>
+                    <div class="tile   bg-yellow " data-role="tile">
+                       
+                    </div>
+                    <div class="tile bg-green " data-role="tile">
+                       
+                    </div>
+                    
+                     
+                    
+                    <div class="tile  tile-super-x bg-orange " data-role="tile">
+                   
+
+
+<div class="tile-content slide-left-2">
+        <div class="slide">
+            <!---debut meteo -->  
+            <div class="weather-main-wrapper">
+                <div class="weather-mask">
+                 
+                   <div class="weather-header-block">
+                      <div class="weather-today">Sunday, July 27, 18:00</div>
+                   </div>
+             
+
+                   <div class="weather-main-block">
+                      <div class="weather-block-info">
+                        <div class="weather-block-content">
+                          <p class="weather-temperature">25</p>
+                        </div>
+                      </div>
+                      <div class="weather-block-info">
+                        <ul class="weather-anime">
+                          <li>
+          
+                            <figure class="icons">
+                                <canvas id="weather-icon" width="180" height="120">
+                                </canvas>
+                                <figcaption class="weather-legend"></figcaption>
+                            </figure>    
+                  
+
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="weather-block-info">
+                        <ul class="weather-params">
+                          <li><i class="climacon thermometer medium-high"></i> <span>743 mm Hg</span></li>
+                          <li><i class="climacon moon full"></i> <span>46% humidity</span></li>
+                          <li><i class="climacon wind"></i> <span>2m/s NW</span></li>
+                        </ul>
+                      </div>
+                   </div>
+
+                </div>
+            </div>
+          <!--fin meteo -->
+        </div>
+
+        <div class="slide-over">
+            ... Over slide content here ...
+        </div>
+</div>
+
+
+
+
+                       
+                    </div>
+                  
+                    
+                </div> <!-- End first group -->
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+<div id="meteo"><div>
+
+
+
+      
+    <script>
+    refreshMeteo(30);
+    
+
+    </script>
+
+
+
+
+
+</body>
+</html>
