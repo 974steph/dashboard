@@ -26,16 +26,49 @@ function getMeteo()
 
 function displayData(data)
 {   var skycons = new Skycons({"color": "pink"});
-
-	console.log(data);
+	  console.log(data);
     skycons.add("weather-icon", data.currently.icon);
+   
     $('.weather-temperature').html( entier(data.currently.temperature) );
     $('.weather-legend').html( entier(data.currently.summary) );
     skycons.play();
 
+    
+     
+         $('#tmp-7').html( '16' );
+         displayWeek(data.daily.data);
+
 }
 
+function displayWeek(data)
+{ 
+    var skyconsForecast = new Skycons({"color": "white"});
+    
+    
+    $.each(data, function(index, value){
+        
+        $('#day-'+index).html(getDayName(value.time));
+        $('#tmp-'+index).html( entier(value.temperatureMax) );
+        if (value.temperatureMax < 0)
+        {
+          $('#tmp-'+index).addClass('minus');
+        }
+        skyconsForecast.add('weather-icon-'+index, value.icon);
+    });
 
+  skyconsForecast.play();
+
+}
+
+function getDayName(day)
+{
+  var date = new Date(day  * 1000);
+  
+  var weekdays = ["Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi"];
+  return weekdays[date.getDay()];
+
+
+}
 function entier(nb)
   {
 
