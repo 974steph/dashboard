@@ -151,7 +151,31 @@
   line-height: 1em;
   color: rgba(255,255,255,0.85);
 }
+.icons{
 
+
+    margin-left: 10px;
+    margin-right: 10px;
+
+}
+
+#weather-icon{
+  top: 0px;
+  right: 0px;
+  left: -15px;
+  height: 120px;
+  width: 180px;
+
+}
+
+.weather-legend{
+  font-size: 12px;
+  height: 50px;
+  width: 180px;
+  text-align: center;
+
+
+}
 
 /*background*/
 .weather-mask {
