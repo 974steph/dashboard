@@ -84,7 +84,7 @@
 <div class="toolbar">
   <div class="toolbar-section">
     <div data-role="group" data-group-type="one-state">
-        <button class="button large-button  bg-pink  block-shadow-info" id="onOffAuto_ON" onclick="commandAutoOnOff('On')">
+        <button class="button large-button  bg-pink  block-shadow-info" id="onOffAuto_ON" onclick="commandAutoOnOff('on')">
           <span class="icon mif-play mif-1x"></span>
           <span class="title">On</span>
           
@@ -94,7 +94,7 @@
           <pan class="title">Auto</span>
           
         </button>
-        <button class="button large-button  bg-pink  block-shadow-info" id="onOffAuto_OFF" onclick="commandAutoOnOff('Off')">
+        <button class="button large-button  bg-pink  block-shadow-info" id="onOffAuto_OFF" onclick="commandAutoOnOff('off')">
           <span class="icon mif-stop mif-1x "></span>
           <span class="title">Off</span>
           
@@ -104,11 +104,18 @@
   
 
   <div class="toolbar-section">
-    <button class="shortcut-button bg-cyan bg-ribbed-darkBlue fg-white primary"id="horsGel" onclick="commandSwitchHG()">
+    <button class="shortcut-button bg-cyan bg-ribbed-darkBlue fg-white primary extentsize"id="horsGel" onclick="commandSwitchHG()">
         <span class="icon mif-snowflake mif-ani-spin mif-3x" id="horsGelIcon"></span>
         <span class="title">Hors Gel</span>
         <span class="badge">on</span>
     </button>
+
+    <button class="shortcut-button bg-cyan bg-ribbed-darkBlue fg-white primary extentsize"  >
+        <span class="icon mif-thermometer2" id="consigneTemp">18</span>
+        <span class="title">Consigne</span>
+        <span class="badge"></span>
+    </button>
+
   </div>
 </div>
 
@@ -128,16 +135,26 @@
                             <div class=" padding10">
                                 <!--thermometre -->
                                 <div class="ssaTempcontainer">
+                                       
+                                       
                                         <div class="de">
                                             <div class="den">
+                                            <div id='animatedring' class="roue"></div>
                                               <div class="dene">
                                                 <div class="denem">
                                                   <div class="deneme">
                                                   </div>
                                                 </div>
                                               </div>
+
                                             </div>
+
                                         </div>
+
+
+                                        
+
+
                                 </div>
                             </div>
                         </div>

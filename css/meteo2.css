@@ -4,6 +4,9 @@
   box-sizing: border-box;
 }
 
+.extentsize {
+  width: 140px;
+}
 .weather-main-wrapper {
 
   width: 100%;

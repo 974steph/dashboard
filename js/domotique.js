@@ -24,8 +24,60 @@ function getDomotique()
   getEtatCommandeChauffage();
   displayDate("#mToday");
   getEtatHg();
+  getConsigneTemp();
+  getEtatChaudiere();
 }
 
+
+
+function getEtatChaudiere()
+{
+  url="http://"+serveur+"&type=cmd&id=175";
+  console.log(url);
+  $.get( url, function( data ) 
+  { 
+    displayEtatChaudiere(data);
+
+  }); 
+
+
+}
+
+function displayEtatChaudiere(data)
+{ console.log("etat chaudiere " +data);
+  if (data==0)
+  {
+    
+    $("#animatedring").removeClass('roue');
+  }
+  else
+  { 
+    $("#animatedring").addClass('roue');
+
+  }
+}
+
+
+function getConsigneTemp()
+{
+  url="http://"+serveur+"&type=cmd&id=145";
+  console.log(url);
+  $.get( url, function( data ) 
+  { 
+    displayConsigneTemp(data);
+
+  }); 
+
+
+
+}
+
+
+function displayConsigneTemp(data)
+{
+  $('#consigneTemp').html( data );
+
+}
 
 function getEtatCommandeChauffage()
 { url="http://"+serveur+"&type=cmd&id=185";
@@ -70,9 +122,9 @@ function getLocalTemp()
 
 function displayEtatCommandeChauffage(data)
 {
-  console.log(data=='auto');
+  
   if (data == 'off') 
-  { $('#buttonOnOFF').removeClass('active');
+  {    $('#buttonOnOFF').removeClass('active');
        $('#EtatChauffage').text('OFF').css('color', '#2a2a2a');
        activeOnOffAuto('#onOffAuto_OFF');
   }
@@ -209,6 +261,17 @@ function displayDate(where)
 function commandAutoOnOff(command)
 {
   console.log(command);
+  //displayEtatCommandeChauffage(command);
+  url="http://"+serveur+"&type=cmd&id=184&slider="+command;
+  
+  $.getJSON(url, function(data)
+  {
+    console.log(data);
+  });
+
+  //actu
+  getDomotique();
+
 }
 
 
